@@ -1,3 +1,5 @@
+import { DirectionType } from "./common.types";
+
 export interface Blog {
   posts:Post[];
   category:string;
@@ -26,5 +28,8 @@ export interface Author{
 }
 
 export interface Tool{
-  id:string
+  id:string;
+  direction: DirectionType;
 }
+
+const direction: DirectionType='up';
