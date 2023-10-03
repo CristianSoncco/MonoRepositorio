@@ -46,7 +46,7 @@ interface Login {
   sha256: string;
 }
 
-interface Location {
+export interface Location {
   street: Street;
   city: string;
   state: string;
@@ -55,6 +55,9 @@ interface Location {
   coordinates: Coordinates;
   timezone: Timezone;
 }
+
+
+
 
 interface Timezone {
   offset: string;
