@@ -20,7 +20,7 @@ interface Result {
   nat: string;
 }
 
-interface Picture {
+export interface Picture {
   large: string;
   medium: string;
   thumbnail: string;
