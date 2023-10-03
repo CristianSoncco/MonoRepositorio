@@ -18,6 +18,7 @@ export class Person
 {
   readonly name:string;
   lastName:string;
+  age:number;
   getFullName():string{
     return `${this.name} ${this.lastName}`
   }
@@ -26,6 +27,8 @@ export class Person
 const person = new Person();
 // person.name='Cristian';
 person.lastName='Soncco';
+person.age = null;
+
 person.getFullName();
 
 
