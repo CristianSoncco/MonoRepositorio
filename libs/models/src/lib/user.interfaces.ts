@@ -5,19 +5,19 @@ interface Info {
   version: string;
 }
 
-interface Result {
-  gender: string;
-  name: Name;
-  location: Location;
-  email: string;
-  login: Login;
-  dob: Dob;
-  registered: Dob;
-  phone: string;
-  cell: string;
-  id: Id;
-  picture: Picture;
-  nat: string;
+export interface User {
+  gender?: string;
+  name?: Partial<Name>;
+  location?: Partial<Location>;
+  email?: string;
+  login?: Partial<Login>;
+  dob?: Partial<Dob>;
+  registered?: Partial<Dob>;
+  phone?: string;
+  cell?: string;
+  id?: Partial<Id>;
+  picture?: Partial<Picture>;
+  nat?: string;
 }
 
 export interface Picture {

@@ -1,4 +1,4 @@
-import {Picture,Location} from '@trucos/models'
+import {Picture,Location,User} from '@trucos/models'
 
 export function utils(): string {
   return 'utils';
@@ -37,6 +37,22 @@ person.location= {
 
 
 person.getFullName();
+
+
+const user: Required<User> = {
+  gender:'',
+  name:{},
+  location:{},
+  email:'',
+  login:{},
+  dob:{},
+  registered:{},
+  phone:'',
+  cell:'',
+  id:{},
+  picture:{},
+  nat:'',
+}
 
 
 const userPhoto: Readonly<Picture> = {
