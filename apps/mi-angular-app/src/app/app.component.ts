@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { greet } from '@trucos/utils'
+import { greet,sum } from '@trucos/utils'
+import { Author } from '@trucos/models'
 
 @Component({
   standalone: true,
@@ -13,4 +14,5 @@ import { greet } from '@trucos/utils'
 export class AppComponent {
   title = 'mi-angular-app';
   greeting= greet('testprueba');
+  autor:Author=null;
 }

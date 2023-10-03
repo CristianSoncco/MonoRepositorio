@@ -12,7 +12,19 @@ export interface Post{
   author:Author[];
 }
 
+/**
+ *  Autor del post
+ *  * Opción 1
+ *  * Opción 2
+ *  * Opción 3
+ *  @export
+ *  @interface Author
+ */
 export interface Author{
   name:string;
   email:string;
+}
+
+export interface Tool{
+  id:string
 }
