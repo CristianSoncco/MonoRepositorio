@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {Picture,Location,User, SimpleNameType, Company, Name} from '@trucos/models'
 
 export function utils(): string {
@@ -186,3 +187,13 @@ quantity; // ?
 setInterval(() => {
   quantity++; // ?
 }, 3_000);
+
+//*** Tipos de datos genéricos
+
+interface KeyPair {
+  key: number;
+  value: string;
+}
+
+let pair1: KeyPair = { key: 1, value: 'Up' };
+let pair2: KeyPair = { key: 2, value: 'Down' };
