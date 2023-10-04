@@ -135,7 +135,7 @@ const directions ={
     name:'Commodore',
     bits:'64'
   }
-};
+} as const;
 
 directions.UP = 'arriba';
 directions.console.name = 'Amstrad';
