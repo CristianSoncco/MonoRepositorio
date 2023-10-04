@@ -17,13 +17,16 @@ export function greet(name:string):string{
 export class Person
 {
   readonly name:string;
-  lastName:string;
+  lastName='';
   age:number | null|undefined;
-  location:Partial<Location>;
+  location!:Partial<Location>;
   getFullName():string{
     return `${this.name} ${this.lastName}`
   }
-  constructor(){}
+  constructor(){
+    this.name='Cristian';
+
+  }
 }
 
 const person = new Person();
