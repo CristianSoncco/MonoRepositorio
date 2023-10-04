@@ -42,7 +42,12 @@ person.getFullName();
 const user: Required<User> = {
   gender:'',
   name:{},
-  location:{},
+  location:{
+    street:{
+      name:'Las Hiedras',
+      number:30
+    }
+  },
   email:'',
   login:{},
   dob:{},
@@ -68,3 +73,12 @@ const userPhoto: Readonly<Picture> = {
 // userPhoto.large='https://via.placeholder.com/500.png';
 
 
+function getStreetNumber(cliente:User){
+  if(cliente.location?.street?.number){
+    return cliente.location?.street?.number;
+  }else {
+    return 'Sin número';
+  }
+}
+
+getStreetNumber(user); // ?
