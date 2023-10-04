@@ -1,4 +1,4 @@
-import {Picture,Location,User, Name} from '@trucos/models'
+import {Picture,Location,User, Name, SimpleNameType} from '@trucos/models'
 
 export function utils(): string {
   return 'utils';
@@ -54,7 +54,7 @@ const user: Required<User> = {
   nat:'',
 }
 
-const name:Omit<Name,"title">={
+const name:SimpleNameType={
   first:"Cristian",
   last:"Soncco"
 }
