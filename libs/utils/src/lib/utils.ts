@@ -190,10 +190,10 @@ setInterval(() => {
 
 //*** Tipos de datos genéricos
 
-interface KeyPair {
-  key: number;
-  value: string;
+interface KeyPair <T,U>{
+  key: T;
+  value: U;
 }
 
-let pair1: KeyPair = { key: 1, value: 'Up' };
-let pair2: KeyPair = { key: 2, value: 'Down' };
+const pair1: KeyPair<number,string> = { key: 1, value: 'Up' };
+const pair2: KeyPair<number,boolean> = { key: 2, value: false };
