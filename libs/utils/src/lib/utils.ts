@@ -1,4 +1,4 @@
-import {Picture,Location,User, Name, SimpleNameType} from '@trucos/models'
+import {Picture,Location,User, SimpleNameType, Company} from '@trucos/models'
 
 export function utils(): string {
   return 'utils';
@@ -73,7 +73,7 @@ const userPhoto: Readonly<Picture> = {
 // userPhoto.large='https://via.placeholder.com/500.png';
 
 
-function getStreetNumber(cliente:User){
+function getStreetNumber(cliente:User | Company) :number|string{
   if(cliente.location?.street?.number){
     return cliente.location?.street?.number;
   }else {
