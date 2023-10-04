@@ -137,6 +137,12 @@ const directions ={
   }
 } as const;
 
-directions.UP = 'arriba';
-directions.console.name = 'Amstrad';
+// directions.UP = 'arriba';
+// directions.console.name = 'Amstrad';
 
+//** Arreglos de sólo lectura
+const consoles:ReadonlyArray<string>=['Commodore','Amstrad','ZX Spectrum'];
+const consolesA:readonly string[]=['Commodore','Amstrad','ZX Spectrum'];
+
+consoles[0]= 'SX-64';
+consolesA[0]= 'SX-64';
