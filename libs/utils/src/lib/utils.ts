@@ -23,6 +23,7 @@ export class Person
   getFullName():string{
     return `${this.name} ${this.lastName}`
   }
+  constructor(){}
 }
 
 const person = new Person();
@@ -74,7 +75,13 @@ const userPhoto: Readonly<Picture> = {
 
 
 function getStreetNumber(cliente:User | Company) :number|string{
-  if(cliente.location?.street?.number){
+  //typeof
+  if(cliente.location?.street?.number && typeof cliente.location?.street?.number =='number'
+  //in consulta si la propiedad number existe en parametro cliente
+  && 'number' in cliente
+//uso de in, para verificar si la propiedad street existe en el elemento location de cliente.
+  && 'street' in cliente.location
+  ){
     return cliente.location?.street?.number;
   }else {
     return 'Sin número';
@@ -100,3 +107,17 @@ let value :unknown;
 let flag:boolean=value;
 
 typeof flag; // boolean
+
+
+//***Type Guards */
+//***Tipos primitivos(typeof): number, string, boolean y symbol */
+//***Por instancia (instanceof):variable creada a través de un constructor */
+//** Por tipo de propiedad (in) */
+
+
+//instaceof
+function notify(persona:Person){
+  if (persona instanceof Person) {
+    null;
+  }
+}
