@@ -163,16 +163,16 @@ fullName.first = 'Cristian';
 fullName.last = 'Soncco';
 fullName.title = 'Sr.';
 
-export async function getRemoteData(url: string) {
+export async function getRemoteData<T>(url: string):Promise<T> {
   const response = await fetch(url);
   const body = await response.json();
   return body.results;
 }
 
 async function manageClients() {
-  const clients = <User[]>(
-    await getRemoteData('https://randomuser.me/api?results=5')
-  );
+  const clients =
+    await getRemoteData<User[]>('https://randomuser.me/api?results=5')
+
 
   clients[0].name; // ?
 }
