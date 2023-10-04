@@ -82,3 +82,21 @@ function getStreetNumber(cliente:User | Company) :number|string{
 }
 
 getStreetNumber(user); // ?
+
+// tslint:disable: prefer-const
+// tslint:disable: no-unused-expression
+
+
+let value2: any =true;
+
+let flag2:boolean=value2;
+
+typeof flag2; // boolean
+
+
+
+let value :unknown;
+
+let flag:boolean=value;
+
+typeof flag; // boolean
