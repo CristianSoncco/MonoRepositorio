@@ -1,4 +1,4 @@
-import {Picture,Location,User} from '@trucos/models'
+import {Picture,Location,User, Name} from '@trucos/models'
 
 export function utils(): string {
   return 'utils';
@@ -54,6 +54,10 @@ const user: Required<User> = {
   nat:'',
 }
 
+const name:Omit<Name,"title">={
+  first:"Cristian",
+  last:"Soncco"
+}
 
 const userPhoto: Readonly<Picture> = {
   large:'https://via.placeholder.com/300.png',
@@ -62,3 +66,5 @@ const userPhoto: Readonly<Picture> = {
 };
 
 // userPhoto.large='https://via.placeholder.com/500.png';
+
+
