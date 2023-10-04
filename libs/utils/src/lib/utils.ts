@@ -124,3 +124,19 @@ function notify(persona:Person){
     null;
   }
 }
+
+//*** Bloqueo de propiedades de objetos
+const directions ={
+  UP:'Up',
+  DOWN:'Down',
+  LEFT:'Left',
+  RIGHT:'Right',
+  console:{
+    name:'Commodore',
+    bits:'64'
+  }
+};
+
+directions.UP = 'arriba';
+directions.console.name = 'Amstrad';
+
