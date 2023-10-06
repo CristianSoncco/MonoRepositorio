@@ -190,9 +190,9 @@ setInterval(() => {
 
 //*** Tipos de datos genéricos
 
-interface KeyPair <T,U>{
-  key: T;
-  value: U;
+interface KeyPair <Tr,Ur>{
+  key: Tr;
+  value: Ur;
 }
 
 const pair1: KeyPair<number,string> = { key: 1, value: 'Up' };
